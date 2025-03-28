@@ -363,6 +363,7 @@ def add_parsers_to_cli_subparser(subparsers):
 
 
 class AcerPredatorPH1671(RgbKeyboard):
+    # This can also be "1266:282:USB-HID Gaming Keyboard (C)" as reported by https://github.com/patrickalima98
     VID = 0x04F2
 
     PID = 0x0117
