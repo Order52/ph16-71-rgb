@@ -64,7 +64,7 @@ sudo groupadd plugdev
 sudo usermod -a -G plugdev $USER
 echo 'SUBSYSTEM=="usb", MODE="0660", GROUP="plugdev"' | sudo tee /etc/udev/rules.d/99-usb-permissions.rules
 sudo udevadm control --reload-rules
-echo "Please log out and back in for changes to take effect"
+echo "Please log out and back in for changes to take effect or restart"
 ```
   
 ### Then use the rgb_menu.py for more user-friendly usage!
