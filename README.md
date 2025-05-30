@@ -32,20 +32,20 @@ cd rgbkb
 ```
 
 # Step 2: Install dependencies
-# First install system dependencies
+ First install system dependencies
 ```bash
 sudo pacman -S python python-pipx  # or python3/python3-pipx depending on your distro
 ```
 
 # Core Python dependencies (automatically handled by pip)
-# Includes:
-# - pyusb
-# - click
-# - rich
-# - packaging
+ Includes:
+ - pyusb
+ - click
+ - rich
+ - packaging
 
 # Step 3: Install the application
-# Option 1: Using pipx (recommended)
+ Option 1: Using pipx (recommended)
 ```bash
 pipx install --editable '.[dev]'
 ```
