@@ -50,7 +50,7 @@ sudo pacman -S python python-pipx  # or python3/python3-pipx depending on your d
 pipx install --editable '.[dev]'
 ```
 
-# OR Option 2: Using virtual environment
+ OR Option 2: Using virtual environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
