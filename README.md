@@ -22,6 +22,7 @@ A CLI tool to control RGB backlight effects on the Acer Predator PH16-71 keyboar
   - Rain
 - **Persistent Settings**: Save your last-used effect and reapply it at startup
 - **Customizable Parameters**: Adjust speed, brightness, and direction for supported effects
+- **Randomize Effects**: Random effect on execution
 
 ## Installation
 
@@ -69,5 +70,8 @@ echo "Please log out and back in for changes to take effect or restart"
   
 ### Then use the rgb_menu.py for more user-friendly usage!
 ```bash
-python3 ./rgb_menu.py
+chmod +x rgb_menu.py
+chmod +x rgb_random.py   
+python3 ./rgb_menu.py  # RGB Menu
+python ./rgb_random.py # The Randomizer
 ```
