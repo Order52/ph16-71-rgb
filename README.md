@@ -54,7 +54,8 @@ pipx install --editable '.[dev]'
 pipx uninstall rgbkb
 
 # 2. Clone the repository
-git clone https://github.com/Order52/ph16-71-rgb.git cd ph16-71-rgb
+git clone https://github.com/Order52/ph16-71-rgb.git
+cd ph16-71-rgb
 
 # 3. Install the actual package from the subfolder
 pipx install --include-deps
