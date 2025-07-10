@@ -58,7 +58,7 @@ git clone https://github.com/Order52/ph16-71-rgb.git
 cd ph16-71-rgb
 
 # 3. Install the actual package from the subfolder
-pipx install --include-deps
+pipx install --include-deps ~/ph16-71-rgb/
 
 # 4. Inject the missing dependency (click)
 pipx inject rgbkb click
