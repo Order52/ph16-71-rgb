@@ -49,6 +49,24 @@ sudo pacman -S python python-pipx  # or python3/python3-pipx depending on your d
  Option 1: Using pipx (recommended)
 ```bash
 pipx install --editable '.[dev]'
+
+# 1. Uninstall existing version (if any)
+pipx uninstall rgbkb
+
+# 2. Clone the repository
+git clone https://github.com/Order52/ph16-71-rgb.git cd ph16-71-rgb
+
+# 3. Install the actual package from the subfolder
+pipx install --include-deps
+
+# 4. Inject the missing dependency (click)
+pipx inject rgbkb click
+
+# 5. Test it
+which rgbkb
+rgbkb --help
+rgbkb wave --speed 10 --level 0
+
 ```
 
  OR Option 2: Using virtual environment
