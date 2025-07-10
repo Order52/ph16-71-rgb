@@ -22,7 +22,7 @@ This was tested to work on **PH18-71** by [tech3475](https://github.com/tech3475
   - Stars
   - Lightning
   - Rain
-- **Persistent Settings**: Save your last-used effect and reapply it at startup
+- **Persistent Settings**: Save your last-used effect and reapply it at startup (And added systemd support to work on boot)
 - **Customizable Parameters**: Adjust speed, brightness, and direction for supported effects
 - **Randomize Effects**: Random effect on execution
 
