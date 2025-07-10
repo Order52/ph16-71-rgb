@@ -87,8 +87,9 @@ echo "Please log out and back in for changes to take effect or restart"
   
 ### Then use the rgb_menu.py for more user-friendly usage!
 ```bash
+cd ~/ph16-71-rgb
 chmod +x rgb_menu.py
 chmod +x rgb_random.py   
 python3 ./rgb_menu.py  # RGB Menu
-python ./rgb_random.py # The Randomizer
+python ./rgb_random.py # The RGB Randomizer
 ```
