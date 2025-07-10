@@ -48,8 +48,6 @@ sudo pacman -S python python-pipx  # or python3/python3-pipx depending on your d
 # Step 3: Install the application
  Option 1: Using pipx (recommended)
 ```bash
-pipx install --editable '.[dev]'
-
 # 1. Uninstall existing version (if any)
 pipx uninstall rgbkb
 
