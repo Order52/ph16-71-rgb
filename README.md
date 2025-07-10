@@ -6,6 +6,8 @@ A CLI tool to control RGB backlight effects on the Acer Predator PH16-71 keyboar
 - [fuho](https://github.com/fuho) for creating this amazing project!
 - [sbstratos79](https://github.com/sbstratos79) for the RGB color implementations!
 
+This was tested to work on **PH18-71** by [tech3475](https://github.com/tech3475)
+
 ## Features
 
 - **Static Color**: Set the entire keyboard to a custom HEX color
