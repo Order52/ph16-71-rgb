@@ -8,6 +8,9 @@ A CLI tool to control RGB backlight effects on the Acer Predator PH16-71 keyboar
 
 This was tested to work on **PH18-71** by [tech3475](https://github.com/tech3475)
 
+## **RGB on the back of the laptop**
+So I capured some wireshark while changing the rear RGB light and put them in the wireshark folder, Now I can't implement it to this project cause I don't know how to, I shared the captures incase someone was interested to make it work.
+
 ##  **Predator Key** 
 You can also check out how bind the Predator Key on your keyboard here https://github.com/Order52/Predator-Key
 
