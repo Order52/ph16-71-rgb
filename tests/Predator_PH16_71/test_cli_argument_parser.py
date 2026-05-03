@@ -2,7 +2,7 @@ import sys
 
 import pytest
 
-from rgbkb.acer_ph16_71.device import AcerPredatorPH1671
+from rgbkb.controller.device import RgbController
 from rgbkb.cli import CliParser
 
 
@@ -35,7 +35,7 @@ from rgbkb.cli import CliParser
     ],
 )
 def test_parser_with_one_command(argv):
-    parser = CliParser(AcerPredatorPH1671)
+    parser = CliParser(RgbController)
     parsed = parser.parse(argv.split())
     print(parsed)
     assert parsed != ""
@@ -72,7 +72,7 @@ def test_parser_with_one_command(argv):
    ],
 )
 def test_parser_with_more_commands(argv, expected):
-    parser = CliParser(AcerPredatorPH1671)
+    parser = CliParser(RgbController)
     parsed = parser.parse(argv.split())
     print(parsed)
     assert parsed == expected
@@ -88,6 +88,6 @@ def test_parser_with_more_commands(argv, expected):
     ],
 )
 def test_parser_should_fail_to_parse(argv):
-    parser = CliParser(AcerPredatorPH1671)
+    parser = CliParser(RgbController)
     with pytest.raises(ValueError, match=r'Unknown keyword .+ on position \d+.'):
         parser.parse(argv.split())

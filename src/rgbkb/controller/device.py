@@ -1,8 +1,8 @@
 import argparse
 from textwrap import wrap
 from usbx import Device, RequestType, Recipient, ControlTransfer, TransferDirection
-from rgbkb.acer_ph16_71.commands import ARGUMENTS_TO_COMMANDS, EffectNames
-from rgbkb.acer_ph16_71.keys import KeyNames, GroupNames
+from rgbkb.controller.commands import ARGUMENTS_TO_COMMANDS, EffectNames
+from rgbkb.controller.keys import KeyNames, GroupNames
 from rgbkb.kb import RgbKeyboard, KeyboardCommand
 
 class OrderedArgs(argparse.Action):
@@ -361,14 +361,9 @@ def add_parsers_to_cli_subparser(subparsers):
             help=f"Set color of {keyword}, Accepts: RGB, RRGGBB and named html colors."
         )
 
-
-class AcerPredatorPH1671(RgbKeyboard):
+class RgbController(RgbKeyboard):
     # This can also be "1266:282:USB-HID Gaming Keyboard (C)" as reported by https://github.com/patrickalima98
     VID = 0x04F2
-
-    PID = 0x0117
-    MODEL = "PH16-71"
-    NAME = "Acer Predator PH16-71 Keyboard"
 
     @staticmethod
     def update_subparser(subparsers):
@@ -377,7 +372,7 @@ class AcerPredatorPH1671(RgbKeyboard):
 
     @staticmethod
     def parse_arguments(argv: list[str]) -> list[KeyboardCommand]:
-        keywords = AcerPredatorPH1671.available_cli_keywords()
+        keywords = RgbController.available_cli_keywords()
         i = 0
         split_arguments = []
         while i < len(argv):
@@ -449,3 +444,13 @@ class AcerPredatorPH1671(RgbKeyboard):
         self.device.release_interface(3)
         self.device.close()
         self.device.attach_standard_drivers()
+
+class AcerPredatorPH1671(RgbController):
+    PID = 0x0117
+    MODEL = "PH16-71"
+    NAME = "Acer Predator PH16-71 Keyboard"
+
+class AcerPredatorPH1871(RgbController):
+    PID = 0x011a
+    MODEL = "PH18-71"
+    NAME = "Acer Predator PH18-71 Keyboard"
